@@ -86,7 +86,7 @@ function filter_braille_convert_dot_list_to_unicode($dot_list) {
       $ret .= filter_braille_convert_dots_to_unicode($bits[$i]);
     }
   }
-  return "<span style='font-family: SimBraille, \"Segoe UI Symbol\"'>" . $ret . "</span>";
+  return "<span style='font-family: SimBraille, \"Segoe UI Symbol\"' class='btext'>" . $ret . "</span>";
 }
 
 function filter_braille_convert_braille($content, $display_utf8) {
@@ -99,7 +99,7 @@ function filter_braille_convert_braille($content, $display_utf8) {
   else {
     $bcontent = htmlspecialchars($acontent);
   }
-  return "<span style='font-family: SimBraille, \"Segoe UI Symbol\"'>" . $bcontent . "</span>";
+  return "<span style='font-family: SimBraille, \"Segoe UI Symbol\"' class='btext'>" . $bcontent . "</span>";
 }
 
 function filter_braille_convert_simbraille($matches) {
